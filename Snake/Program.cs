@@ -18,20 +18,11 @@ namespace Snake
 
             p2.Draw();
 
-            var numList = new List<int>();
+            var hline = new HorizontalLine(5, 10, 8, '+');
+            hline.Draw();
+            var vLine = new VerticalLine(5, 6, 15, 'v');
 
-            numList.Add(0);
-            numList.Add(1);
-            numList.Add(2);
-
-            int x = numList[0];
-            int y = numList[1];
-            int z = numList[2];
-
-            List<Point> pList = new List<Point>();
-            pList.Add(p1);
-            pList.Add(p2);
-
+            vLine.Draw();
 
             Console.ReadLine();
         }
