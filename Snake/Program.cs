@@ -10,21 +10,27 @@ namespace Snake
     {
         static void Main(string[] args)
         {
-            var p1 = new Point(1, 3, '*');
 
-            p1.Draw();
 
-            var p2 = new Point(4, 5, '#');
+            int wHeight = Console.BufferHeight;
+            int wWidth = Console.BufferWidth;
+            Console.BufferHeight = 30;
+            Console.BufferWidth = 120;
 
-            p2.Draw();
 
-            var hline = new HorizontalLine(5, 10, 8, '+');
-            hline.Draw();
-            var vLine = new VerticalLine(5, 6, 15, 'v');
 
-            vLine.Draw();
+            var upLine = new HorizontalLine(0, 118, 0, '+');
+            var botLine = new HorizontalLine(0, 118, 28, '+');
+            var leftLine = new VerticalLine(0, 28, 0, '+');
+            var rightLine = new VerticalLine(0, 28, 119, '+');
 
-            Console.ReadLine();
+            upLine.Draw();
+            botLine.Draw();
+            leftLine.Draw();
+            rightLine.Draw();
+
+            //Console.WriteLine($"{wHeight}/ {wWidth}");
+
         }
 
 
