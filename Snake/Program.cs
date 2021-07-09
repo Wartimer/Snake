@@ -11,14 +11,8 @@ namespace Snake
     {
         static void Main(string[] args)
         {
-
-
-            int wHeight = Console.BufferHeight;
-            int wWidth = Console.BufferWidth;
             Console.BufferHeight = 30;
             Console.BufferWidth = 120;
-
-
 
             var upLine = new HorizontalLine(0, 118, 0, '+');
             var botLine = new HorizontalLine(0, 118, 28, '+');
