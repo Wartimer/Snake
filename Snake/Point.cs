@@ -10,7 +10,7 @@ namespace Snake
     {
         int x;
         int y;
-        char sym;
+        internal char sym;
 
         public Point() { }
 
@@ -41,17 +41,23 @@ namespace Snake
                 y += offset;
         }
 
-        public void Clear()
+        public bool IsHit(Point p)
         {
-            sym = ' ';
-            Draw();
+            return p.x == x && p.y == y;
         }
+
 
 
         public void Draw()
         {
             Console.SetCursorPosition(x, y);
             Console.Write(sym);
+        }
+
+        public void Clear()
+        {
+            sym = ' ';
+            Draw();
         }
 
         public override string ToString()
