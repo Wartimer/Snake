@@ -41,10 +41,22 @@ namespace Snake
                 y -= offset;
         }
 
+        public void Clear()
+        {
+            sym = ' ';
+            Draw();
+        }
+
+
         public void Draw()
         {
             Console.SetCursorPosition(x, y);
             Console.Write(sym);
+        }
+
+        public override string ToString()
+        {
+            return x + "," + y + "," + sym;
         }
     }
 }
