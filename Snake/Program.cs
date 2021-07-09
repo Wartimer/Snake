@@ -29,7 +29,10 @@ namespace Snake
             leftLine.Draw();
             rightLine.Draw();
 
-            //Console.WriteLine($"{wHeight}/ {wWidth}");
+            var p = new Point(4, 5, '*');
+
+            var s = new Snake(p, 4, Direction.RIGHT);
+            s.Draw();
 
         }
 
