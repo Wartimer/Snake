@@ -35,26 +35,16 @@ namespace Snake
             var s = new Snake(p, 4, Direction.RIGHT);
             s.Draw();
 
-            s.Move();
-            Thread.Sleep(300);
-            s.Move();
-            Thread.Sleep(300);
-            s.Move();
-            Thread.Sleep(300);
-            s.Move();
-            Thread.Sleep(300);
-            s.Move();
-            Thread.Sleep(300);
-            s.Move();
-            Thread.Sleep(300);
-            s.Move();
-            Thread.Sleep(300);
-            s.Move();
-            Thread.Sleep(300);
-            s.Move();
-            Thread.Sleep(300);
-            s.Move();
-            Thread.Sleep(300);
+            while (true)
+            {
+                if (Console.KeyAvailable)
+                {
+                    ConsoleKeyInfo key = Console.ReadKey();
+                    s.HandleKey(key.Key);
+                }
+                    Thread.Sleep(100);
+                    s.Move();
+            }
 
         }
     }

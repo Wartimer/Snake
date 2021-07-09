@@ -36,9 +36,9 @@ namespace Snake
             else if (dir == Direction.LEFT)
                 x -= offset;
             else if (dir == Direction.UP)
-                y += offset;
-            else if (dir == Direction.DOWN)
                 y -= offset;
+            else if (dir == Direction.DOWN)
+                y += offset;
         }
 
         public void Clear()
