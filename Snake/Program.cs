@@ -11,21 +11,13 @@ namespace Snake
     {
         static void Main(string[] args)
         {
-            Console.BufferHeight = 30;
-            Console.BufferWidth = 120;
 
-            var upLine = new HorizontalLine(0, 118, 0, '+');
-            var botLine = new HorizontalLine(0, 118, 28, '+');
-            var leftLine = new VerticalLine(0, 28, 0, '+');
-            var rightLine = new VerticalLine(0, 28, 119, '+');
 
-            upLine.Draw();
-            botLine.Draw();
-            leftLine.Draw();
-            rightLine.Draw();
+            var walls = new Walls();
+            walls.Draw();
+
 
             var p = new Point(4, 5, '*');
-
             var s = new Snake(p, 4, Direction.RIGHT);
             s.Draw();
 
@@ -35,6 +27,11 @@ namespace Snake
 
             while (true)
             {
+                if(walls.IsHit(s) || s.IsHitTail())
+                {
+                    break;
+                }
+
                 if (s.Eat(food))
                 {
                     food = fc.CreateFood();

@@ -46,8 +46,6 @@ namespace Snake
             return p.x == x && p.y == y;
         }
 
-
-
         public void Draw()
         {
             Console.SetCursorPosition(x, y);
